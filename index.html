@@ -20,54 +20,65 @@
             color: #333;
         }
 
-        /* The Header Area */
+        /* Header section (No changes needed) */
         header { 
             text-align: center; 
             padding: 60px 20px; 
             background: #333; 
             color: #fff; 
             border-radius: 8px; 
+            margin-bottom: 30px;
         }
 
-        /* THE FONT FIX: Applying WDXL ONLY to your name */
         h1 {
             font-family: "WDXL Lubrifont JP N", sans-serif;
             font-size: 55px; 
             letter-spacing: 3px;
             margin: 0;
-            color: #ffffff; /* Makes your name glow against the dark header */
         }
 
-        header p {
-            font-size: 18px;
-            opacity: 0.9;
-            margin-top: 10px;
+        /* THE BLUEPRINT LAYOUT FIX: Side-by-Side Boxes */
+        .container { 
+            max-width: 900px; 
+            margin: auto; 
+            display: flex; /* This makes children sit side-by-side */
+            gap: 20px;    /* This creates the space between the boxes */
+            justify-content: center;
         }
 
-        /* Project Sections */
-        .container { max-width: 800px; margin: auto; }
-        
         .project-card { 
             background: #fff; 
-            padding: 25px; 
-            margin: 25px 0; 
+            padding: 40px 20px; 
+            border: 2px solid #333; /* Matches your square blueprint look */
             border-radius: 8px; 
-            box-shadow: 0 4px 10px rgba(0,0,0,0.05); 
+            flex: 1; /* Makes both boxes the same width */
+            text-align: center;
+            min-height: 200px; /* Gives them that square-ish shape */
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
         }
 
-        h2 { color: #333; margin-top: 0; }
+        h2 { 
+            color: #333; 
+            font-size: 24px;
+            margin-top: 0;
+        }
 
         .link-btn { 
             display: inline-block; 
             background: #007bff; 
             color: white; 
-            padding: 10px 20px; 
+            padding: 10px 15px; 
             text-decoration: none; 
             border-radius: 5px; 
             font-weight: bold;
         }
 
-        .link-btn:hover { background: #0056b3; }
+        /* Responsive: Stack them on top of each other on phones */
+        @media (max-width: 600px) {
+            .container { flex-direction: column; }
+        }
     </style>
 </head>
 <body>
@@ -79,15 +90,15 @@
 
     <div class="container">
         <section class="project-card">
-            <h2>The Lore of the World</h2>
-            <p>This is where you can start detailing your world-building. Mention your characters, the magic systems, or the history of your setting here!</p>
-            <a href="#" class="link-btn">Read More</a>
+            <h2>Read the series</h2>
+            <p>Dive into the latest chapters of my stories.</p>
+            <a href="#" class="link-btn">Open Archive</a>
         </section>
 
         <section class="project-card">
-            <h2>Character Profiles</h2>
-            <p>An archive of the heroes and villains that inhabit my stories. Protected by copyright 2026.</p>
-            <a href="#" class="link-btn">View Characters</a>
+            <h2>Lore</h2>
+            <p>Explore the world-building, maps, and history.</p>
+            <a href="#" class="link-btn">Explore Lore</a>
         </section>
     </div>
 
