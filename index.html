@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mizumi Sonozawa | Take Your Heart</title>
+    <title>Mizumi Sonozawa | Archive</title>
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -14,19 +14,16 @@
             font-family: sans-serif; 
             margin: 0; 
             padding: 20px; 
-            /* Deep Black/Grey background */
             background-color: #1a1a1a; 
             color: #fff;
-            /* Added a subtle diagonal stripe pattern common in P5 */
             background-image: repeating-linear-gradient(45deg, #1a1a1a, #1a1a1a 10px, #222 10px, #222 20px);
         }
 
         header { 
             text-align: center; 
             padding: 60px 20px; 
-            background: #d32f2f; /* Iconic P5 Red */
+            background: #d32f2f; 
             color: #fff; 
-            /* Jagged shape effect */
             transform: skewY(-2deg);
             margin-bottom: 50px;
             box-shadow: 10px 10px 0px #000;
@@ -35,10 +32,10 @@
         h1 {
             font-family: "WDXL Lubrifont JP N", sans-serif;
             font-size: 60px; 
-            letter-spacing: -2px; /* Tight spacing for that "cutout" look */
+            letter-spacing: -2px; 
             margin: 0;
             text-transform: uppercase;
-            transform: skewY(2deg); /* Straightens the text back up */
+            transform: skewY(2deg); 
             text-shadow: 4px 4px 0px #000;
         }
 
@@ -56,8 +53,7 @@
             border: 5px solid #000; 
             flex: 1; 
             text-align: center;
-            /* The "Jagged" Persona look */
-            transform: rotate(-1deg);
+            transform: rotate(-1.5deg);
             transition: all 0.2s ease-in-out;
             display: flex;
             flex-direction: column;
@@ -65,16 +61,13 @@
             align-items: center;
         }
 
-        /* Make the second card tilt the opposite way */
         .project-card:last-child {
-            transform: rotate(2deg);
+            transform: rotate(1.5deg);
             background: #000;
             border-color: #d32f2f;
         }
 
-        .project-card:last-child h2 {
-            color: #fff;
-        }
+        .project-card:last-child h2 { color: #fff; }
 
         h2 { 
             color: #000; 
@@ -96,43 +89,34 @@
             transition: 0.2s;
         }
 
-        /* Button Hover Effect */
         .link-btn:hover {
             background: #d32f2f;
             transform: scale(1.1) rotate(-3deg);
             box-shadow: 5px 5px 0px #fff;
         }
 
-        .project-card:last-child .link-btn {
-            background: #d32f2f;
-        }
+        .project-card:last-child .link-btn { background: #d32f2f; }
+        .project-card:last-child .link-btn:hover { background: #fff; color: #000; }
 
-        .project-card:last-child .link-btn:hover {
-            background: #fff;
-            color: #000;
-        }
-
-        @media (max-width: 600px) {
-            .container { flex-direction: column; }
-        }
+        @media (max-width: 600px) { .container { flex-direction: column; } }
     </style>
 </head>
 <body>
 
     <header>
         <h1>Mizumi Sonozawa</h1>
-        <p style="font-weight: bold; letter-spacing: 2px;">WORK ARCHIVE // TAKE YOUR HEART</p>
+        <p style="font-weight: bold; letter-spacing: 2px; text-transform: uppercase;">Works & Personal Archive</p>
     </header>
 
     <div class="container">
         <section class="project-card">
             <h2>Read the series</h2>
-            <a href="#" class="link-btn">ENTER ></a>
+            <a href="series.html" class="link-btn">ENTER ></a>
         </section>
 
         <section class="project-card">
             <h2>Lore</h2>
-            <a href="#" class="link-btn">VIEW DATA ></a>
+            <a href="lore.html" class="link-btn">VIEW DATA ></a>
         </section>
     </div>
 
