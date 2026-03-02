@@ -10,7 +10,6 @@
     <link href="https://fonts.googleapis.com/css2?family=WDXL+Lubrifont+JP+N&display=swap" rel="stylesheet">
 
     <style>
-        /* General Page Settings */
         body { 
             font-family: sans-serif; 
             line-height: 1.6; 
@@ -20,7 +19,6 @@
             color: #333;
         }
 
-        /* Header section (No changes needed) */
         header { 
             text-align: center; 
             padding: 60px 20px; 
@@ -37,45 +35,51 @@
             margin: 0;
         }
 
-        /* THE BLUEPRINT LAYOUT FIX: Side-by-Side Boxes */
+        /* Side-by-Side Blueprint Layout */
         .container { 
             max-width: 900px; 
             margin: auto; 
-            display: flex; /* This makes children sit side-by-side */
-            gap: 20px;    /* This creates the space between the boxes */
+            display: flex; 
+            gap: 20px;    
             justify-content: center;
         }
 
         .project-card { 
             background: #fff; 
-            padding: 40px 20px; 
-            border: 2px solid #333; /* Matches your square blueprint look */
+            padding: 50px 20px; 
+            border: 2px solid #333; 
             border-radius: 8px; 
-            flex: 1; /* Makes both boxes the same width */
+            flex: 1; 
             text-align: center;
-            min-height: 200px; /* Gives them that square-ish shape */
+            min-height: 180px; 
             display: flex;
             flex-direction: column;
-            justify-content: space-between;
+            justify-content: center; /* Centers the content vertically */
+            align-items: center;    /* Centers the content horizontally */
         }
 
         h2 { 
             color: #333; 
-            font-size: 24px;
+            font-size: 28px;
             margin-top: 0;
+            margin-bottom: 25px; /* Adds space between heading and button */
         }
 
         .link-btn { 
             display: inline-block; 
             background: #007bff; 
             color: white; 
-            padding: 10px 15px; 
+            padding: 12px 25px; 
             text-decoration: none; 
             border-radius: 5px; 
             font-weight: bold;
+            transition: background 0.3s;
         }
 
-        /* Responsive: Stack them on top of each other on phones */
+        .link-btn:hover {
+            background: #0056b3;
+        }
+
         @media (max-width: 600px) {
             .container { flex-direction: column; }
         }
@@ -91,13 +95,11 @@
     <div class="container">
         <section class="project-card">
             <h2>Read the series</h2>
-            <p>Dive into the latest chapters of my stories.</p>
             <a href="#" class="link-btn">Open Archive</a>
         </section>
 
         <section class="project-card">
             <h2>Lore</h2>
-            <p>Explore the world-building, maps, and history.</p>
             <a href="#" class="link-btn">Explore Lore</a>
         </section>
     </div>
