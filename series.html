@@ -12,7 +12,9 @@
             font-family: sans-serif; 
             background-color: #1a1a1a; 
             color: #fff; 
-            padding: 50px;
+            margin: 0;
+            padding: 40px;
+            /* P5 Style Diagonal Stripes */
             background-image: repeating-linear-gradient(45deg, #1a1a1a, #1a1a1a 10px, #222 10px, #222 20px);
         }
 
@@ -23,13 +25,16 @@
             font-weight: bold;
             display: inline-block;
             margin-bottom: 30px;
-            border: 2px solid #d32f2f;
-            padding: 5px 15px;
+            border: 3px solid #d32f2f;
+            padding: 10px 20px;
+            text-transform: uppercase;
+            transition: 0.2s;
         }
 
         .back-link:hover {
             background: #d32f2f;
             color: #fff;
+            transform: scale(1.1) rotate(-2deg);
         }
 
         h1 { 
@@ -37,44 +42,73 @@
             font-size: 50px; 
             background: #d32f2f; 
             display: inline-block; 
-            padding: 10px 30px;
-            transform: rotate(-2deg);
-            box-shadow: 8px 8px 0px #000;
+            padding: 15px 40px;
+            transform: rotate(-3deg);
+            box-shadow: 10px 10px 0px #000;
+            margin-bottom: 50px;
         }
 
-        .content-box {
+        .content-area {
+            max-width: 800px;
+        }
+
+        .volume-card {
             background: #fff;
             color: #000;
-            margin-top: 50px;
-            padding: 30px;
+            margin: 20px 0;
+            padding: 25px;
             border: 5px solid #000;
             transform: rotate(1deg);
-            max-width: 600px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
         }
 
-        ul { list-style: none; padding: 0; }
-        
-        li { 
-            font-weight: bold; 
-            font-size: 20px; 
-            border-bottom: 2px solid #000; 
-            padding: 15px 0;
+        .volume-card:nth-child(even) {
+            transform: rotate(-1.5deg);
+            background: #000;
+            color: #fff;
+            border-color: #d32f2f;
+        }
+
+        .volume-title {
+            font-family: "WDXL Lubrifont JP N", sans-serif;
+            font-size: 24px;
             text-transform: uppercase;
+        }
+
+        .status-tag {
+            background: #d32f2f;
+            color: #fff;
+            padding: 5px 10px;
+            font-weight: bold;
+            font-size: 12px;
         }
     </style>
 </head>
 <body>
 
-    <a href="index.html" class="back-link">< BACK TO SYSTEM</a>
+    <a href="index.html" class="back-link">< RETURN_TO_MAIN</a>
+    
     <br>
-    <h1>SERIES_DATA</h1>
+    
+    <h1>SERIES_DATABASE</h1>
 
-    <div class="content-box">
-        <ul>
-            <li>Volume 01: [Title Here]</li>
-            <li>Volume 02: [Title Here]</li>
-            <li>Volume 03: [In Progress]</li>
-        </ul>
+    <div class="content-area">
+        <div class="volume-card">
+            <span class="volume-title">Volume 01: The First Arc</span>
+            <span class="status-tag">COMPLETED</span>
+        </div>
+
+        <div class="volume-card">
+            <span class="volume-title">Volume 02: Hidden Depths</span>
+            <span class="status-tag">IN PROGRESS</span>
+        </div>
+
+        <div class="volume-card">
+            <span class="volume-title">Volume 03: Future Lore</span>
+            <span class="status-tag">LOCKED</span>
+        </div>
     </div>
 
 </body>
